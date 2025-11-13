@@ -166,7 +166,7 @@
         </section>
 
         <!-- Summary Checklist -->
-        <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-lg">
+        <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-lg mb-10">
             <h3 class="text-2xl font-semibold mb-3">Your 'Objective Tone' Checklist</h3>
             <ul class="list-disc list-inside space-y-2">
                 <li><strong>Use "hedging" language:</strong> F<code>often</code>, <code>tend to</code>, <code>in many cases</code>, <code>it seems that...</code>, <code>it can be argued that...</code></li>
@@ -176,7 +176,149 @@
             </ul>
         </div>
 
+        <!-- NEW: Practice Exercises Section -->
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Practice What You've Learned</h2>
+
+            <!-- Exercise 1: Over-generalizing -->
+            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #1: Avoid Over-generalization</h3>
+
+                <!-- New MC Question 1 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
+                <div class="space-y-2">
+                    <div id="mc1_a" onclick="checkMC('mc1_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>A:</strong> All young people are addicted to their phones.
+                    </div>
+                    <div id="mc1_b" onclick="checkMC('mc1_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>B:</strong> Phone usage can be a significant distraction for some young people.
+                    </div>
+                </div>
+                <div id="mc1_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                    <strong>Not quite.</strong> This is a strong over-generalization using the word "All".
+                </div>
+                <div id="mc1_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
+                    <strong>Correct!</strong> This sentence is more precise by using "can be" and "some".
+                </div>
+    
+                <!-- Divider -->
+                <hr class="my-6 border-gray-300">
+    
+                <!-- Existing Rewrite Exercise 1 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                <p class="mb-4">Now, rewrite this "weak" sentence to make it more objective.</p>
+                <p class="avoid p-3 rounded mb-3">"<strong>Everyone</strong> who plays video games is wasting their time and will <strong>never</strong> get a good job."</p>
+                <textarea id="ex1_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                <button onclick="showAnswer('ex1')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                <div id="ex1_answer" class="do p-3 rounded mt-3" style="display: none;">
+                    <strong>Suggested Answer:</strong> "<strong>It is sometimes argued that</strong> excessive video gaming <strong>could</strong> negatively impact a person's academic or professional life."
+                </div>
+            </div>
+
+            <!-- Exercise 2: Emotional Language -->
+            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #2: Avoid Emotional Language</h3>
+
+                <!-- New MC Question 2 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
+                <div class="space-y-2">
+                    <div id="mc2_a" onclick="checkMC('mc2_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>A:</strong> It's a wonderful and amazing idea to have a three-day weekend!
+                    </div>
+                    <div id="mc2_b" onclick="checkMC('mc2_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>B:</strong> A three-day weekend could lead to improved employee well-being and productivity.
+                    </div>
+                </div>
+                <div id="mc2_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                    <strong>Not quite.</strong> Words like "wonderful" and "amazing" are emotional and subjective.
+                </div>
+                <div id="mc2_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
+                    <strong>Correct!</strong> This sentence focuses on logical, potential outcomes (well-being, productivity).
+                </div>
+    
+                <!-- Divider -->
+                <hr class="my-6 border-gray-300">
+    
+                <!-- Existing Rewrite Exercise 2 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                <p class="mb-4">Now, rewrite this "weak" sentence to make it more logical and less emotional.</p>
+                <p class="avoid p-3 rounded mb-3">"City life is <strong>awful</strong> and <strong>horrible</strong>! It's just a <strong>disgusting</strong>, noisy mess."</p>
+                <textarea id="ex2_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                <button onclick="showAnswer('ex2')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                <div id="ex2_answer" class="do p-3 rounded mt-3" style="display: none;">
+                    <strong>Suggested Answer:</strong> "Living in a city <strong>can present challenges</strong>, such as high levels of noise and pollution, which <strong>some people</strong> find undesirable."
+                </div>
+            </div>
+
+            <!-- Exercise 3: Personal Examples -->
+            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #3: Use Broader Examples</h3>
+
+                <!-- New MC Question 3 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                <p class="mb-3">Which sentence is <strong>stronger</strong> academic evidence?</p>
+                <div class="space-y-2">
+                    <div id="mc3_a" onclick="checkMC('mc3_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>A:</strong> My sister lives in London, and she says the public transport is terrible.
+                    </div>
+                    <div id="mc3_b" onclick="checkMC('mc3_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                        <strong>B:</strong> Public transport in large cities, such as London, often faces challenges with crowding and delays.
+                    </div>
+                </div>
+                <div id="mc3_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                    <strong>Not quite.</strong> This is a personal example ("My sister") and is not strong evidence.
+                </div>
+                <div id="mc3_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
+                    <strong>Correct!</strong> This is a broader, more academic observation about large cities.
+                </div>
+    
+                <!-- Divider -->
+                <hr class="my-6 border-gray-300">
+    
+                <!-- Existing Rewrite Exercise 3 -->
+                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                <p class="mb-4">Now, rewrite this "weak" argument to make it broader and more academic.</p>
+                <p class="avoid p-3 rounded mb-3">"<strong>My cousin</strong> got a job without a degree, so university is <strong>totally</strong> useless."</p>
+                <textarea id="ex3_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                <button onclick="showAnswer('ex3')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                <div id="ex3_answer" class="do p-3 rounded mt-3" style="display: none;">
+                    <strong>Suggested Answer:</strong> "While university is one path to a career, <strong>there are examples</strong> of individuals achieving professional success without a formal degree, suggesting alternative routes are also viable."
+                </div>
+            </div>
+        </section>
+
     </div>
+
+    <!-- Simple JS for exercises -->
+    <script>
+        function showAnswer(exerciseId) {
+            const answerEl = document.getElementById(exerciseId + '_answer');
+            if (answerEl) {
+                answerEl.style.display = 'block';
+            }
+        }
+
+        // New function for Multiple Choice feedback
+        function checkMC(elementId) {
+            // Get the base ID (e.g., "mc1", "mc2")
+            const baseId = elementId.substring(0, 3);
+            
+            // Hide both feedback divs for that question
+            const falseFeedback = document.getElementById(baseId + '_a_feedback');
+            const trueFeedback = document.getElementById(baseId + '_b_feedback');
+            
+            if (falseFeedback) falseFeedback.style.display = 'none';
+            if (trueFeedback) trueFeedback.style.display = 'none';
+            
+            // Show the specific feedback for the clicked option
+            const feedbackEl = document.getElementById(elementId + '_feedback');
+            if (feedbackEl) {
+                feedbackEl.style.display = 'block';
+            }
+        }
+    </script>
 
 </body>
 </html>
