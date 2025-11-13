@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objective Tone in Opinion Essays</title>
+    <title>Opinion Essay Guide</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -16,283 +16,391 @@
             background-color: #f0fdf4; /* green-50 */
             color: #166534; /* green-800 */
         }
+        
+        /* Styles for active/inactive tabs */
+        .tab-btn.active {
+            border-bottom-color: #2563eb; /* blue-600 */
+            color: #2563eb; /* blue-600 */
+            font-weight: 600;
+        }
+        .tab-btn {
+            border-bottom-width: 3px;
+            border-bottom-color: transparent;
+        }
+        
+        /* Hide tab content by default */
+        .tab-content {
+            display: none;
+        }
+        /* Show active tab content */
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
 
     <div class="container max-w-4xl mx-auto p-6 sm:p-10 bg-white rounded-lg shadow-lg my-10">
 
-        <!-- Header Section -->
-        <div class="border-b-2 border-blue-600 pb-4 mb-6">
-            <h1 class="text-3xl sm:text-4xl font-bold text-blue-700">Writing an Opinion Essay?</h1>
-            <h2 class="text-2xl sm:text-3xl font-light text-gray-600">How to Sound 'Objective'</h2>
+        <!-- Tab Navigation -->
+        <div class="border-b border-gray-200 mb-8">
+            <nav class="flex -mb-px space-x-6" aria-label="Tabs">
+                <!-- Tab 1 Button -->
+                <button id="btn-tab1" class="tab-btn active whitespace-nowrap py-4 px-1 text-base" onclick="switchTab('tab1')">
+                    Understand the Task
+                </button>
+                <!-- Tab 2 Button -->
+                <button id="btn-tab2" class="tab-btn whitespace-nowrap py-4 px-1 text-base text-gray-500 hover:text-gray-700" onclick="switchTab('tab2')">
+                    How to Sound 'Objective'
+                </button>
+            </nav>
         </div>
 
-        <!-- Introduction -->
-        <div class="mb-8">
-            <p class="text-lg mb-4">
-                How can an <strong>opinion</strong> be <strong>objective</strong>? This is a common question. The answer is simple:
+        <!-- TAB 1 CONTENT: Understand the Task (NEW) -->
+        <div id="content-tab1" class="tab-content active">
+            <!-- Header Section -->
+            <div class="border-b-2 border-purple-600 pb-4 mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-purple-700">Writing Task:</h1>
+                <h2 class="text-2xl sm:text-3xl font-light text-gray-600">"Does money make us happy?"</h2>
+            </div>
+
+            <p class="text-lg mb-8 p-4 bg-purple-50 text-purple-800 rounded-lg">
+                Let's explore this topic using the <strong>Think, Pair, Share</strong> method.
             </p>
-            <ul class="list-disc list-inside space-y-2 text-lg">
-                <li>Your <strong>STANCE</strong> is subjective (it's your personal opinion).</li>
-                <li>Your <strong>TONE</strong> must be objective (it must sound formal, calm, and logical).</li>
-            </ul>
-            <p class="mt-4 text-lg p-4 bg-gray-50 rounded-lg">
-                <strong>Think of it this way:</strong> You are a lawyer in a courtroom. You have a strong opinion (your client is innocent), but you must persuade the judge with <strong>logic and evidence</strong>, not by shouting or crying.
-            </p>
+
+            <!-- Think, Pair, Share Structure -->
+            <div class="space-y-8">
+                
+                <!-- Step 1: THINK -->
+                <div class="p-6 bg-white rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </span>
+                        <h3 class="text-2xl font-semibold text-blue-700 ml-4">1. Think (Individually)</h3>
+                    </div>
+                    <p class="text-lg mb-4">Read the question below. Which of these things influence <strong>your</strong> happiness? How?</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">clothes and possessions</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">entertainment</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">family</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">free-time activities</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">friends</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">health</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">vacations</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">school and teachers</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">social media</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">where you live</span>
+                    </div>
+                </div>
+
+                <!-- Step 2: PAIR -->
+                <div class="p-6 bg-white rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2m0 2H5m12 0v-2m0 2a3 3 0 01-5.356-1.857M17 20H5M9 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </span>
+                        <h3 class="text-2xl font-semibold text-green-700 ml-4">2. Pair (With a partner)</h3>
+                    </div>
+                    <p class="text-lg">Discuss this question with a partner:</p>
+                    <p class="text-lg p-4 bg-gray-50 rounded-lg mt-2">
+                        "What about the <strong>adults</strong> you know (like family or teachers)? Are the factors that influence <strong>their</strong> happiness different from yours? In what way?"
+                    </p>
+                </div>
+
+                <!-- Step 3: SHARE -->
+                <div class="p-6 bg-white rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6M7 8h6"></path></svg>
+                        </span>
+                        <h3 class="text-2xl font-semibold text-yellow-800 ml-4">3. Share (As a group)</h3>
+                    </div>
+                    <p class="text-lg">Be ready to share your ideas with the class. Think about these two points:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg p-4 bg-gray-50 rounded-lg mt-2">
+                        <li>How might the things from Step 1 be different if you had <strong>a lot more money</strong>?</li>
+                        <li>What about if you had <strong>a lot less money</strong>?</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
-        <!-- Rule 1: Don't Exaggerate -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #1: Don't Exaggerate or Over-generalize</h2>
-            <p class="text-base mb-4">
-                Words like <code>all</code>, <code>never</code>, <code>everyone</code>, or <code>always</code> are "absolute" words. They are usually untrue and make your argument sound weak and childish.
-            </p>
-            
-            <div class="overflow-x-auto rounded-lg border">
-                <table class="w-full">
-                    <thead>
-                        <tr class="text-left">
-                            <th class="p-3 font-semibold">What to AVOID (Weak)</th>
-                            <th class="p-3 font-semibold">What to DO (Strong)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="avoid">
-                            <td class="p-3">"<strong>Everyone</strong> knows that mobile phones are bad for children."</td>
-                            <td class="p-3 do">"<strong>It is often argued that</strong> mobile phones can have negative effects on children."</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- TAB 2 CONTENT: How to Sound 'Objective' (EXISTING CONTENT) -->
+        <div id="content-tab2" class="tab-content">
+            <!-- Header Section -->
+            <div class="border-b-2 border-blue-600 pb-4 mb-6">
+                <h1 class="text-3xl sm:text-4xl font-bold text-blue-700">Writing an Opinion Essay?</h1>
+                <h2 class="text-2xl sm:text-3xl font-light text-gray-600">How to Sound 'Objective'</h2>
             </div>
-
-            <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
-            <ul class="list-disc list-inside space-y-4">
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "People <strong>never</strong> read books anymore because of the internet."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "The internet <strong>may have reduced</strong> the time many people spend reading traditional books."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>All</strong> politicians are corrupt."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "Corruption <strong>can be a significant problem</strong> within some governments."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "You <strong>always</strong> get a good job if you go to university."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "A university education <strong>tends to</strong> improve a person's employment prospects."</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Rule 2: Don't Be Too Emotional -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #2: Don't Be Too Emotional</h2>
-            <p class="text-base mb-4">
-                Your argument is stronger when it is based on logic, not feelings. Avoid "emotional" words.
-            </p>
-            
-            <div class="overflow-x-auto rounded-lg border">
-                <table class="w-full">
-                    <thead>
-                        <tr class="text-left">
-                            <th class="p-3 font-semibold">What to AVOID (Weak)</th>
-                            <th class="p-3 font-semibold">What to DO (Strong)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="avoid">
-                            <td class="p-3">"I <strong>hate</strong> the idea of junk food. It's <strong>disgusting</strong>!"</td>
-                            <td class="p-3 do">"Junk food <strong>is often criticized</strong> for its poor nutritional value and links to health issues."</td>
-                        </tr>
-                    </tbody>
-                </table>
+    
+            <!-- Introduction -->
+            <div class="mb-8">
+                <p class="text-lg mb-4">
+                    How can an <strong>opinion</strong> be <strong>objective</strong>? This is a common question. The answer is simple:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li>Your <strong>STANCE</strong> is subjective (it's your personal opinion).</li>
+                    <li>Your <strong>TONE</strong> must be objective (it must sound formal, calm, and logical).</li>
+                </ul>
+                <p class="mt-4 text-lg p-4 bg-gray-50 rounded-lg">
+                    <strong>Think of it this way:</strong> You are a lawyer in a courtroom. You have a strong opinion (your client is innocent), but you must persuade the judge with <strong>logic and evidence</strong>, not by shouting or crying.
+                </p>
             </div>
-
-            <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
-            <ul class="list-disc list-inside space-y-4">
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "It's <strong>crazy</strong> to let teenagers have social media!"</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "The impact of social media on teenagers <strong>is a serious concern</strong> for many parents and experts."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "The new city park is <strong>wonderful</strong> and the <strong>best thing ever</strong>!"</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "The new city park <strong>provides significant social and environmental benefits</strong> to the community."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "I <strong>feel angry</strong> when I see so much plastic waste."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "Plastic waste <strong>is a pressing environmental problem</strong> that requires urgent action."</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Rule 3: Avoid Only Personal Examples -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #3: Avoid Making All Examples About You</h2>
-            <p class="text-base mb-4">
-                Your personal life is not strong evidence. Make your examples broader and more academic.
-            </p>
-            
-            <div class="overflow-x-auto rounded-lg border">
-                <table class="w-full">
-                    <thead>
-                        <tr class="text-left">
-                            <th class="p-3 font-semibold">What to AVOID (Weak)</th>
-                            <th class="p-3 font-semibold">What to DO (Strong)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="avoid">
-                            <td class="p-3">"<strong>My friend</strong> tried to learn Spanish online and he failed. This shows online learning is bad."</td>
-                            <td class="p-3 do">"<strong>For some students</strong>, online learning can be difficult if they require face-to-face interaction."</td>
-                        </tr>
-                    </tbody>
-                </table>
+    
+            <!-- Rule 1: Don't Exaggerate -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #1: Don't Exaggerate or Over-generalize</h2>
+                <p class="text-base mb-4">
+                    Words like <code>all</code>, <code>never</code>, <code>everyone</code>, or <code>always</code> are "absolute" words. They are usually untrue and make your argument sound weak and childish.
+                </p>
+                
+                <div class="overflow-x-auto rounded-lg border">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-left">
+                                <th class="p-3 font-semibold">What to AVOID (Weak)</th>
+                                <th class="p-3 font-semibold">What to DO (Strong)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="avoid">
+                                <td class="p-3">"<strong>Everyone</strong> knows that mobile phones are bad for children."</td>
+                                <td class="p-3 do">"<strong>It is often argued that</strong> mobile phones can have negative effects on children."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "People <strong>never</strong> read books anymore because of the internet."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "The internet <strong>may have reduced</strong> the time many people spend reading traditional books."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>All</strong> politicians are corrupt."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "Corruption <strong>can be a significant problem</strong> within some governments."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "You <strong>always</strong> get a good job if you go to university."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "A university education <strong>tends to</strong> improve a person's employment prospects."</span>
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- Rule 2: Don't Be Too Emotional -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #2: Don't Be Too Emotional</h2>
+                <p class="text-base mb-4">
+                    Your argument is stronger when it is based on logic, not feelings. Avoid "emotional" words.
+                </p>
+                
+                <div class="overflow-x-auto rounded-lg border">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-left">
+                                <th class="p-3 font-semibold">What to AVOID (Weak)</th>
+                                <th class="p-3 font-semibold">What to DO (Strong)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="avoid">
+                                <td class="p-3">"I <strong>hate</strong> the idea of junk food. It's <strong>disgusting</strong>!"</td>
+                                <td class="p-3 do">"Junk food <strong>is often criticized</strong> for its poor nutritional value and links to health issues."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "It's <strong>crazy</strong> to let teenagers have social media!"</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "The impact of social media on teenagers <strong>is a serious concern</strong> for many parents and experts."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "The new city park is <strong>wonderful</strong> and the <strong>best thing ever</strong>!"</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "The new city park <strong>provides significant social and environmental benefits</strong> to the community."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "I <strong>feel angry</strong> when I see so much plastic waste."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "Plastic waste <strong>is a pressing environmental problem</strong> that requires urgent action."</span>
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- Rule 3: Avoid Only Personal Examples -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-blue-700 mb-4">Rule #3: Avoid Making All Examples About You</h2>
+                <p class="text-base mb-4">
+                    Your personal life is not strong evidence. Make your examples broader and more academic.
+                </p>
+                
+                <div class="overflow-x-auto rounded-lg border">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-left">
+                                <th class="p-3 font-semibold">What to AVOID (Weak)</th>
+                                <th class="p-3 font-semibold">What to DO (Strong)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="avoid">
+                                <td class="p-3">"<strong>My friend</strong> tried to learn Spanish online and he failed. This shows online learning is bad."</td>
+                                <td class="p-3 do">"<strong>For some students</strong>, online learning can be difficult if they require face-to-face interaction."</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>In my high school,</strong> we had to wear uniforms, and we all hated it."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "School uniforms <strong>are often unpopular</strong> with students, who may feel they limit personal expression."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>My dad</strong> works 10 hours a day and is always tired, so long hours are bad."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "<strong>In many modern workplaces,</strong> long working hours are a common cause of employee stress and burnout."</span>
+                    </li>
+                    <li>
+                        <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>I</strong> use social media every day, and it doesn't make me sad."</span><br>
+                        <span class="do p-1 rounded"><strong>Do:</strong> "The psychological impact of social media <strong>can vary from person to person</strong>."</span>
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- Summary Checklist -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-lg mb-10">
+                <h3 class="text-2xl font-semibold mb-3">Your 'Objective Tone' Checklist</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Use "hedging" language:</strong> <code>often</code>, <code>tend to</code>, <code>in many cases</code>, <code>it seems that...</code>, <code>it can be argued that...</code></li>
+                    <li><strong>Focus on ideas, not feelings:</strong> Instead of "I feel...", write "It is..." or "This suggests...".</li>
+                    <li><strong>Use broad examples:</strong> "For example, in many countries...", "Studies often show that...", "For many people...".</li>
+                    <li><strong>Stay formal:</strong> Avoid slang or a casual, spoken style.</li>
+                </ul>
             </div>
-
-            <h3 class="font-semibold text-lg mt-6 mb-2">More Examples:</h3>
-            <ul class="list-disc list-inside space-y-4">
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>In my high school,</strong> we had to wear uniforms, and we all hated it."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "School uniforms <strong>are often unpopular</strong> with students, who may feel they limit personal expression."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>My dad</strong> works 10 hours a day and is always tired, so long hours are bad."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "<strong>In many modern workplaces,</strong> long working hours are a common cause of employee stress and burnout."</span>
-                </li>
-                <li>
-                    <span class="avoid p-1 rounded"><strong>Avoid:</strong> "<strong>I</strong> use social media every day, and it doesn't make me sad."</span><br>
-                    <span class="do p-1 rounded"><strong>Do:</strong> "The psychological impact of social media <strong>can vary from person to person</strong>."</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Summary Checklist -->
-        <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-lg mb-10">
-            <h3 class="text-2xl font-semibold mb-3">Your 'Objective Tone' Checklist</h3>
-            <ul class="list-disc list-inside space-y-2">
-                <li><strong>Use "hedging" language:</strong> F<code>often</code>, <code>tend to</code>, <code>in many cases</code>, <code>it seems that...</code>, <code>it can be argued that...</code></li>
-                <li><strong>Focus on ideas, not feelings:</strong> Instead of "I feel...", write "It is..." or "This suggests...".</li>
-                <li><strong>Use broad examples:</strong> "For example, in many countries...", "Studies often show that...", "For many people...".</li>
-                <li><strong>Stay formal:</strong> Avoid slang or a casual, spoken style.</li>
-            </ul>
+    
+            <!-- Practice Exercises Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Practice What You've Learned</h2>
+    
+                <!-- Exercise 1: Over-generalizing -->
+                <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #1: Avoid Over-generalization</h3>
+    
+                    <!-- MC Question 1 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                    <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
+                    <div class="space-y-2">
+                        <div id="mc1_a" onclick="checkMC('mc1_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>A:</strong> All young people are addicted to their phones.
+                        </div>
+                        <div id="mc1_b" onclick="checkMC('mc1_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>B:</strong> Phone usage can be a significant distraction for some young people.
+                        </div>
+                    </div>
+                    <div id="mc1_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                        <strong>Not quite.</strong> This is a strong over-generalization using the word "All".
+                    </div>
+                    <div id="mc1_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
+                        <strong>Correct!</strong> This sentence is more precise by using "can be" and "some".
+                    </div>
+        
+                    <!-- Divider -->
+                    <hr class="my-6 border-gray-300">
+        
+                    <!-- Rewrite Exercise 1 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                    <p class="mb-4">Now, rewrite this "weak" sentence to make it more objective.</p>
+                    <p class="avoid p-3 rounded mb-3">"<strong>Everyone</strong> who plays video games is wasting their time and will <strong>never</strong> get a good job."</p>
+                    <textarea id="ex1_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                    <button onclick="showAnswer('ex1')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                    <div id="ex1_answer" class="do p-3 rounded mt-3" style="display: none;">
+                        <strong>Suggested Answer:</strong> "<strong>It is sometimes argued that</strong> excessive video gaming <strong>could</strong> negatively impact a person's academic or professional life."
+                    </div>
+                </div>
+    
+                <!-- Exercise 2: Emotional Language -->
+                <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #2: Avoid Emotional Language</h3>
+    
+                    <!-- MC Question 2 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                    <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
+                    <div class="space-y-2">
+                        <div id="mc2_a" onclick="checkMC('mc2_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>A:</strong> It's a wonderful and amazing idea to have a three-day weekend!
+                        </div>
+                        <div id="mc2_b" onclick="checkMC('mc2_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>B:</strong> A three-day weekend could lead to improved employee well-being and productivity.
+                        </div>
+                    </div>
+                    <div id="mc2_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                        <strong>Not quite.</strong> Words like "wonderful" and "amazing" are emotional and subjective.
+                    </div>
+                    <div id="mc2_b_feedback" classs="do p-2 rounded mt-2" style="display: none;">
+                        <strong>Correct!</strong> This sentence focuses on logical, potential outcomes (well-being, productivity).
+                    </div>
+        
+                    <!-- Divider -->
+                    <hr class="my-6 border-gray-300">
+        
+                    <!-- Rewrite Exercise 2 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                    <p class="mb-4">Now, rewrite this "weak" sentence to make it more logical and less emotional.</p>
+                    <p class="avoid p-3 rounded mb-3">"City life is <strong>awful</strong> and <strong>horrible</strong>! It's just a <strong>disgusting</strong>, noisy mess."</p>
+                    <textarea id="ex2_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                    <button onclick="showAnswer('ex2')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                    <div id="ex2_answer" class="do p-3 rounded mt-3" style="display: none;">
+                        <strong>Suggested Answer:</strong> "Living in a city <strong>can present challenges</strong>, such as high levels of noise and pollution, which <strong>some people</strong> find undesirable."
+                    </div>
+                </div>
+    
+                <!-- Exercise 3: Personal Examples -->
+                <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #3: Use Broader Examples</h3>
+    
+                    <!-- MC Question 3 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
+                    <p class="mb-3">Which sentence is <strong>stronger</strong> academic evidence?</p>
+                    <div class="space-y-2">
+                        <div id="mc3_a" onclick="checkMC('mc3_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>A:</strong> My sister lives in London, and she says the public transport is terrible.
+                        </div>
+                        <div id="mc3_b" onclick="checkMC('mc3_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
+                            <strong>B:</strong> Public transport in large cities, such as London, often faces challenges with crowding and delays.
+                        </div>
+                    </div>
+                    <div id="mc3_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
+                        <strong>Not quite.</strong> This is a personal example ("My sister") and is not strong evidence.
+                    </div>
+                    <div id="mc3_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
+                        <strong>Correct!</strong> This is a broader, more academic observation about large cities.
+                    </div>
+        
+                    <!-- Divider -->
+                    <hr class="my-6 border-gray-300">
+        
+                    <!-- Rewrite Exercise 3 -->
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
+                    <p class="mb-4">Now, rewrite this "weak" argument to make it broader and more academic.</p>
+                    <p class="avoid p-3 rounded mb-3">"<strong>My cousin</strong> got a job without a degree, so university is <strong>totally</strong> useless."</p>
+                    <textarea id="ex3_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
+                    <button onclick="showAnswer('ex3')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
+                    <div id="ex3_answer" class="do p-3 rounded mt-3" style="display: none;">
+                        <strong>Suggested Answer:</strong> "While university is one path to a career, <strong>there are examples</strong> of individuals achieving professional success without a formal degree, suggesting alternative routes are also viable."
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- NEW: Practice Exercises Section -->
-        <section class="mb-10">
-            <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Practice What You've Learned</h2>
-
-            <!-- Exercise 1: Over-generalizing -->
-            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #1: Avoid Over-generalization</h3>
-
-                <!-- New MC Question 1 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
-                <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
-                <div class="space-y-2">
-                    <div id="mc1_a" onclick="checkMC('mc1_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>A:</strong> All young people are addicted to their phones.
-                    </div>
-                    <div id="mc1_b" onclick="checkMC('mc1_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>B:</strong> Phone usage can be a significant distraction for some young people.
-                    </div>
-                </div>
-                <div id="mc1_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
-                    <strong>Not quite.</strong> This is a strong over-generalization using the word "All".
-                </div>
-                <div id="mc1_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
-                    <strong>Correct!</strong> This sentence is more precise by using "can be" and "some".
-                </div>
-    
-                <!-- Divider -->
-                <hr class="my-6 border-gray-300">
-    
-                <!-- Existing Rewrite Exercise 1 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
-                <p class="mb-4">Now, rewrite this "weak" sentence to make it more objective.</p>
-                <p class="avoid p-3 rounded mb-3">"<strong>Everyone</strong> who plays video games is wasting their time and will <strong>never</strong> get a good job."</p>
-                <textarea id="ex1_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
-                <button onclick="showAnswer('ex1')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
-                <div id="ex1_answer" class="do p-3 rounded mt-3" style="display: none;">
-                    <strong>Suggested Answer:</strong> "<strong>It is sometimes argued that</strong> excessive video gaming <strong>could</strong> negatively impact a person's academic or professional life."
-                </div>
-            </div>
-
-            <!-- Exercise 2: Emotional Language -->
-            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #2: Avoid Emotional Language</h3>
-
-                <!-- New MC Question 2 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
-                <p class="mb-3">Which sentence is <strong>more</strong> objective?</p>
-                <div class="space-y-2">
-                    <div id="mc2_a" onclick="checkMC('mc2_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>A:</strong> It's a wonderful and amazing idea to have a three-day weekend!
-                    </div>
-                    <div id="mc2_b" onclick="checkMC('mc2_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>B:</strong> A three-day weekend could lead to improved employee well-being and productivity.
-                    </div>
-                </div>
-                <div id="mc2_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
-                    <strong>Not quite.</strong> Words like "wonderful" and "amazing" are emotional and subjective.
-                </div>
-                <div id="mc2_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
-                    <strong>Correct!</strong> This sentence focuses on logical, potential outcomes (well-being, productivity).
-                </div>
-    
-                <!-- Divider -->
-                <hr class="my-6 border-gray-300">
-    
-                <!-- Existing Rewrite Exercise 2 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
-                <p class="mb-4">Now, rewrite this "weak" sentence to make it more logical and less emotional.</p>
-                <p class="avoid p-3 rounded mb-3">"City life is <strong>awful</strong> and <strong>horrible</strong>! It's just a <strong>disgusting</strong>, noisy mess."</p>
-                <textarea id="ex2_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
-                <button onclick="showAnswer('ex2')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
-                <div id="ex2_answer" class="do p-3 rounded mt-3" style="display: none;">
-                    <strong>Suggested Answer:</strong> "Living in a city <strong>can present challenges</strong>, such as high levels of noise and pollution, which <strong>some people</strong> find undesirable."
-                </div>
-            </div>
-
-            <!-- Exercise 3: Personal Examples -->
-            <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Practice Rule #3: Use Broader Examples</h3>
-
-                <!-- New MC Question 3 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part A: Multiple Choice</h4>
-                <p class="mb-3">Which sentence is <strong>stronger</strong> academic evidence?</p>
-                <div class="space-y-2">
-                    <div id="mc3_a" onclick="checkMC('mc3_a')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>A:</strong> My sister lives in London, and she says the public transport is terrible.
-                    </div>
-                    <div id="mc3_b" onclick="checkMC('mc3_b')" class="p-3 border rounded-lg cursor-pointer hover:bg-gray-100">
-                        <strong>B:</strong> Public transport in large cities, such as London, often faces challenges with crowding and delays.
-                    </div>
-                </div>
-                <div id="mc3_a_feedback" class="avoid p-2 rounded mt-2" style="display: none;">
-                    <strong>Not quite.</strong> This is a personal example ("My sister") and is not strong evidence.
-                </div>
-                <div id="mc3_b_feedback" class="do p-2 rounded mt-2" style="display: none;">
-                    <strong>Correct!</strong> This is a broader, more academic observation about large cities.
-                </div>
-    
-                <!-- Divider -->
-                <hr class="my-6 border-gray-300">
-    
-                <!-- Existing Rewrite Exercise 3 -->
-                <h4 class="text-lg font-semibold mb-2 text-gray-700">Part B: Rewrite the Sentence</h4>
-                <p class="mb-4">Now, rewrite this "weak" argument to make it broader and more academic.</p>
-                <p class="avoid p-3 rounded mb-3">"<strong>My cousin</strong> got a job without a degree, so university is <strong>totally</strong> useless."</p>
-                <textarea id="ex3_input" class="w-full h-24 p-2 border rounded border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your objective sentence..."></textarea>
-                <button onclick="showAnswer('ex3')" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Show Suggested Answer</button>
-                <div id="ex3_answer" class="do p-3 rounded mt-3" style="display: none;">
-                    <strong>Suggested Answer:</strong> "While university is one path to a career, <strong>there are examples</strong> of individuals achieving professional success without a formal degree, suggesting alternative routes are also viable."
-                </div>
-            </div>
-        </section>
 
     </div>
 
-    <!-- Simple JS for exercises -->
+    <!-- Simple JS for exercises AND tabs -->
     <script>
+        // Function for showing suggested answers in exercises
         function showAnswer(exerciseId) {
             const answerEl = document.getElementById(exerciseId + '_answer');
             if (answerEl) {
@@ -300,14 +408,18 @@
             }
         }
 
-        // New function for Multiple Choice feedback
+        // Function for Multiple Choice feedback
         function checkMC(elementId) {
-            // Get the base ID (e.g., "mc1", "mc2")
             const baseId = elementId.substring(0, 3);
             
-            // Hide both feedback divs for that question
-            const falseFeedback = document.getElementById(baseId + '_a_feedback');
-            const trueFeedback = document.getElementById(baseId + '_b_feedback');
+            // Determine correct answer ('a' or 'b')
+            let correctLetter = 'b';
+            if (baseId === 'mc_') { /* Placeholder for future logic if needed */ }
+            let wrongLetter = (correctLetter === 'b') ? 'a' : 'b';
+
+            // Hide both feedback divs
+            const falseFeedback = document.getElementById(baseId + '_' + wrongLetter + '_feedback');
+            const trueFeedback = document.getElementById(baseId + '_' + correctLetter + '_feedback');
             
             if (falseFeedback) falseFeedback.style.display = 'none';
             if (trueFeedback) trueFeedback.style.display = 'none';
@@ -318,6 +430,35 @@
                 feedbackEl.style.display = 'block';
             }
         }
+
+        // --- NEW SCRIPT FOR TABS ---
+        const allTabBtns = document.querySelectorAll('.tab-btn');
+        const allTabContents = document.querySelectorAll('.tab-content');
+
+        function switchTab(tabId) {
+            // Deactivate all buttons and hide all content
+            allTabBtns.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('text-gray-500', 'hover:text-gray-700');
+            });
+            allTabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Activate the clicked button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('text-gray-500', 'hover:text-gray-700');
+            
+            // Show the corresponding content
+            const activeContent = document.getElementById('content-' + tabId);
+            activeContent.classList.add('active');
+        }
+
+        // Initialize the first tab as active (optional, but good practice)
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('tab1');
+        });
     </script>
 
 </body>
